@@ -1,15 +1,25 @@
 module bedtime-bully-backend
 
-go 1.22.6
+go 1.23.0
 
 require (
+	entgo.io/ent v0.14.1
 	github.com/goccy/go-json v0.10.3
 	github.com/gofiber/fiber/v2 v2.52.5
+	github.com/lib/pq v1.10.9
 )
 
 require (
-	github.com/BurntSushi/toml v1.4.1-0.20240526193622-a339e1f7089c // indirect
-	golang.org/x/tools v0.21.1-0.20240531212143-b6235391adb3 // indirect
+	ariga.io/atlas v0.19.1-0.20240203083654-5948b60a8e43 // indirect
+	github.com/agext/levenshtein v1.2.1 // indirect
+	github.com/apparentlymart/go-textseg/v13 v13.0.0 // indirect
+	github.com/go-openapi/inflect v0.19.0 // indirect
+	github.com/google/go-cmp v0.6.0 // indirect
+	github.com/hashicorp/hcl/v2 v2.13.0 // indirect
+	github.com/mitchellh/go-wordwrap v0.0.0-20150314170334-ad45545899c7 // indirect
+	github.com/zclconf/go-cty v1.8.0 // indirect
+	golang.org/x/mod v0.20.0 // indirect
+	golang.org/x/text v0.13.0 // indirect
 )
 
 require (
@@ -24,5 +34,5 @@ require (
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasthttp v1.51.0 // indirect
 	github.com/valyala/tcplisten v1.0.0 // indirect
-	golang.org/x/sys v0.20.0 // indirect
+	golang.org/x/sys v0.23.0 // indirect
 )

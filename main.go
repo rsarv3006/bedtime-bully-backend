@@ -2,6 +2,8 @@ package main
 
 import (
 	"bedtime-bully-backend/config"
+	"bedtime-bully-backend/repository"
+	"bedtime-bully-backend/router"
 	"log"
 
 	"github.com/goccy/go-json"
@@ -15,7 +17,7 @@ func main() {
 	jwtSecret := config.Config("JWT_SECRET")
 	env := config.Config("ENV")
 
-	// client := repository.Connect()
+	client := repository.Connect()
 
 	app := fiber.New(fiber.Config{
 		Prefork:     false,
@@ -48,7 +50,7 @@ func main() {
 
 	log.Println("Created new fiber app...")
 
-	// router.SetupRoutes(app, client)
+	router.SetupRoutes(app, client)
 
 	log.Println("Routes setup.")
 
