@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bedtime-bully-backend/alert"
 	"bedtime-bully-backend/config"
 	"bedtime-bully-backend/repository"
 	"bedtime-bully-backend/router"
@@ -33,7 +34,7 @@ func main() {
 	app.Use(helmet.New())
 	app.Use(recover.New())
 
-	// apiAlertsClient := alert.Connect()
+	apiAlertsClient := alert.Connect()
 
 	log.Println("Setting context")
 	app.Use(func(c *fiber.Ctx) error {
@@ -43,7 +44,7 @@ func main() {
 
 		c.Locals("JwtSecret", jwtSecret)
 		c.Locals("Env", env)
-		// c.Locals("ApiAlertsClient", apiAlertsClient)
+		c.Locals("ApiAlertsClient", apiAlertsClient)
 
 		return c.Next()
 	})
